@@ -1,0 +1,348 @@
+/* リセットCSS適応 */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    list-style: none;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* ＜ページ内のCSS適応は以下より＞ */
+/* 全体のスタイル */
+html,
+body {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* pageの構成 */
+.inr {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.page-header {
+    padding: 17px 0;
+}
+
+/* header構成 (横並び)*/
+.page-header__inr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* header構成 (縦並び)*/
+.page-header-info__txt span {
+    display: block;
+    font-size: 1.4rem;
+}
+
+.page-header-info__txt {
+    margin-right: 30px;
+}
+
+.page-header_info__btn {
+    background-color: red;
+    color: #fff;
+}
+
+.page-header-info__btn {
+    min-width: 155px;
+    /* (height - (fontSize * lineHeight)) / 2 */
+    padding: calc((50px - (1.6rem * 1.5)) / 2) 0;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #ff0600;
+}
+
+
+/* main-visualの構成 */
+.main-visual {
+    position: relative;
+    height: 480px;
+    background: center center no-repeat;
+    background-image: url(images/main_picture.jpg);
+    background-size: cover;
+}
+
+.main-visual__ttl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:black;
+    font-weight: normal;
+    font-size: 70px;
+    font-family: "YuGthic", "游ゴシック";
+    transform: translate(-50%, -50%);
+}
+
+/*section-headerの構成  */
+.section-header {
+    position: relative;
+    padding: calc((87px - (30px * 1.6)) / 2) 0;;
+    text-align: center;
+    background:#aaa;
+}
+
+.section-header__ttl {
+    color:#fff;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.section-header:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-color: #aaa transparent transparent transparent;
+    border-style: solid;
+    border-width: 28px 28px 0;
+    transform: translate(-50%, 100%);
+    content: "";
+}
+
+/* .intro-section内でのスタイル */
+.intro-section__header {
+    margin-bottom: 100px;
+}
+
+/* intro-section__navの構成 */
+.intro-section__nav {
+    padding: 88px 0 80px;
+}
+
+.intro-section__nav ol {
+    display: flex;
+    justify-content: space-between;
+    width: 810px;
+    margin: 0 auto;
+}
+
+.intro-section__nav ol li {
+    position: relative;
+}
+
+    /* nav内の矢印 */
+.intro-section__nav ol li::after {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translateX(-50%) rotate(45deg);
+    content: "";
+}
+
+.intro-section__nav ol li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 230px;
+    height: 230px;
+    padding: 0 25px;
+    color: #000;
+    font-size: 25px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+/* intro-section__blockの構成 */
+.intro-section__block {
+    display: flex;
+    height: 400px;
+}
+
+.intro-section__block > * {
+    width: 50%;
+}
+
+    /*偶数番目の場合横並びを反転  */
+.intro-section__block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+    /* 各画像の設定 */
+.intro-section__block:nth-child(1) .intro-section__img-area {
+    background-image: url(images/section01.jpg);
+}
+
+.intro-section__block:nth-child(2) .intro-section__img-area {
+    background-image: url(images/section02.jpg);
+}
+
+.intro-section__block:nth-child(3) .intro-section__img-area {
+    background-image: url(images/section03.jpg);
+}
+
+    /* 画像エリア */
+.intro-section__img-area {
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+    /* 文章エリア */
+.intro-section__txt-area {
+    box-sizing: border-box;
+    padding: 30px 20px;
+    color: #fff;
+    background-color:#aaa;
+}
+
+    /* 文章.タイトル */
+.intro-section__txt-area h4 {
+    margin-bottom: 24px;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.intro-section__txt-area p {
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+
+/* contactの構成 */
+.intro-section__contact {
+    padding: 100px 0;
+}
+
+.contact-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 55px 40px 147px;
+    background:#aaa;
+}
+
+.contact-block__txt {
+    font-size: 2.2rem;
+}
+
+.contact-block__txt span{
+    display: block;
+    font-size: 1.4rem;
+}
+
+.contact-block__btn {
+    width: 370px;
+    padding: calc((83px -(2.2rem * 1.6)) / 2) 0;
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+    background-color: red;
+}
+
+/* footerの構造 */
+.page-footer {
+    padding: 40px 0;
+    background-color: #aaa;
+}
+
+.page-footer small {
+    font-size: 1.2rem;
+    display: block;
+    line-height: 1;
+}
